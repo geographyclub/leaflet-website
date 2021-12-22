@@ -40,11 +40,9 @@ function map(){
   var streets = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {noWrap:false}).addTo(map);
   var german = new L.TileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {noWrap:false});
   var french = new L.TileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {noWrap:false});
-  var toner = new L.TileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {noWrap:false});
-  var watercolor = new L.TileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', {noWrap:false});
 
   // switch layers
-  var baseMaps = {"STREETS":streets, "GERMAN":german, "FRENCH":french, "TONER":toner, "WATERCOLOR":watercolor};
+  var baseMaps = {"STREETS":streets, "GERMAN":german, "FRENCH":french};
   L.control.layers(baseMaps, "").addTo(map);
 
 };
